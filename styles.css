@@ -425,6 +425,47 @@ h3 {
   color: var(--teal);
 }
 
+.communication-section {
+  width: 100%;
+  max-width: none;
+  padding-inline: max(clamp(18px, 4vw, 56px), calc((100vw - 1180px) / 2 + 32px));
+  background: #ffffff;
+}
+
+.communication-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.communication-card {
+  min-height: 220px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(17, 24, 39, 0.06);
+}
+
+.communication-card span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf3fb;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.communication-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .contact-section {
   align-items: center;
 }
@@ -457,6 +498,20 @@ h3 {
 
 .lead-form textarea {
   resize: vertical;
+}
+
+.secondary-form-button {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.secondary-form-button:hover {
+  border-color: rgba(15, 118, 110, 0.45);
+  color: var(--teal);
 }
 
 .form-status {
@@ -502,7 +557,8 @@ h3 {
   .split-section,
   .contact-section,
   .solution-grid,
-  .package-grid {
+  .package-grid,
+  .communication-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -545,12 +601,14 @@ h3 {
   .split-section,
   .contact-section,
   .solution-grid,
-  .package-grid {
+  .package-grid,
+  .communication-grid {
     grid-template-columns: 1fr;
   }
 
   .solution-card,
-  .package-card {
+  .package-card,
+  .communication-card {
     min-height: auto;
   }
 
