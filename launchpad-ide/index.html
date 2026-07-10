@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Launchpad IDE</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">L</div>
+          <div>
+            <strong>Launchpad</strong>
+            <span>workspace</span>
+          </div>
+        </div>
+
+        <div class="project-meta">
+          <input id="projectName" aria-label="Project name" value="Neon Todo">
+          <div class="project-stats">
+            <span id="saveState">Saved</span>
+            <span id="projectStats">3 files</span>
+          </div>
+        </div>
+
+        <nav class="top-actions" aria-label="Workspace actions">
+          <button id="templateButton" type="button">Kits</button>
+          <button id="newFileButton" type="button" aria-label="New file">+</button>
+          <button id="exportButton" type="button">Save</button>
+          <button id="runButton" class="primary" type="button"><span></span>Run</button>
+        </nav>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar">
+          <section class="panel builder-panel">
+            <div class="panel-header">
+              <h2>Build</h2>
+              <span>Idea to app</span>
+            </div>
+            <textarea id="ideaInput" rows="6" placeholder="landing, tracker, dashboard, game"></textarea>
+            <div class="keyword-row">
+              <button data-idea="landing page for a new product" type="button">landing</button>
+              <button data-idea="dashboard for tracking work" type="button">dashboard</button>
+              <button data-idea="habit tracker with progress cards" type="button">tracker</button>
+              <button data-idea="click game with a score" type="button">game</button>
+            </div>
+            <button id="generateButton" type="button">Build</button>
+          </section>
+
+          <section class="panel file-panel">
+            <div class="panel-header">
+              <h2>Files</h2>
+              <button id="resetButton" type="button">Reset</button>
+            </div>
+            <div class="file-search">
+              <input id="fileSearch" aria-label="Search files" placeholder="Find file">
+            </div>
+            <div id="fileTree" class="file-tree"></div>
+          </section>
+        </aside>
+
+        <section class="editor-column">
+          <div id="tabs" class="tabs"></div>
+          <div class="editor-tools">
+            <div class="file-name-control">
+              <label for="activeFileName">Editing</label>
+              <input id="activeFileName" aria-label="Active file name">
+            </div>
+            <div class="editor-actions">
+              <input id="searchInput" aria-label="Find in current file" placeholder="Find">
+              <span id="searchCount">0</span>
+              <button id="tidyButton" type="button">Tidy</button>
+              <label class="switch"><input id="autoRunToggle" type="checkbox" checked><span>Auto run</span></label>
+            </div>
+          </div>
+          <div class="editor-surface">
+            <div id="lineNumbers" class="line-numbers"></div>
+            <textarea id="editor" spellcheck="false" aria-label="Code editor"></textarea>
+          </div>
+          <footer class="statusbar">
+            <span id="statusLanguage">HTML</span>
+            <span id="statusCursor">Ln 1, Col 1</span>
+            <span id="statusSize">0 chars</span>
+          </footer>
+        </section>
+
+        <section class="preview-column">
+          <div class="preview-toolbar">
+            <div class="preview-tabs">
+              <button id="previewTab" class="active" type="button">Preview</button>
+              <button id="consoleTab" type="button">Console</button>
+            </div>
+            <div class="preview-actions">
+              <button class="active" data-device="desktop" type="button">Wide</button>
+              <button data-device="mobile" type="button">Phone</button>
+              <button id="reloadPreviewButton" type="button">Refresh</button>
+            </div>
+          </div>
+          <div id="previewPane" class="preview-frame-wrap">
+            <div id="previewStage" class="preview-stage desktop">
+              <iframe id="preview" title="Live preview" sandbox="allow-scripts allow-modals"></iframe>
+            </div>
+          </div>
+          <div id="consolePane" class="console-pane" hidden>
+            <div class="console-header">
+              <span id="consoleCount">0 logs</span>
+              <button id="clearConsoleButton" type="button">Clear</button>
+            </div>
+            <div id="consoleOutput" class="console-output"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="templatesDialog">
+      <form method="dialog">
+        <div class="dialog-header">
+          <h2>Kits</h2>
+          <button type="submit">x</button>
+        </div>
+        <div class="template-grid">
+          <button data-template="landing" type="button"><strong>landing</strong><span>product page</span></button>
+          <button data-template="dashboard" type="button"><strong>dashboard</strong><span>metrics view</span></button>
+          <button data-template="tracker" type="button"><strong>tracker</strong><span>cards and progress</span></button>
+          <button data-template="game" type="button"><strong>game</strong><span>click target</span></button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
