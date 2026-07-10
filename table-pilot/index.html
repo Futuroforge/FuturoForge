@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Table Pilot - γρήγορο καθάρισμα, ανάλυση και εξαγωγή πινάκων CSV."
+    >
+    <title>Table Pilot | FuturoForge</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace-head" aria-labelledby="pageTitle">
+        <div>
+          <p class="eyebrow">FuturoForge tool</p>
+          <h1 id="pageTitle">Table Pilot</h1>
+          <p class="intro">
+            Ρίξε ένα CSV, καθάρισε τον πίνακα, δες σύνολα και εξήγαγε έτοιμο αρχείο χωρίς Excel.
+          </p>
+        </div>
+        <div class="head-actions" aria-label="Κύριες ενέργειες">
+          <label class="file-button">
+            <input id="csvInput" type="file" accept=".csv,text/csv">
+            Import CSV
+          </label>
+          <button id="pasteButton" type="button">Paste data</button>
+          <button id="sampleButton" type="button">Demo</button>
+          <button id="exportButton" class="primary" type="button">Export CSV</button>
+        </div>
+      </section>
+
+      <section class="control-strip" aria-label="Εργαλεία πίνακα">
+        <label class="search-control">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Πελάτης, status, ποσό...">
+        </label>
+        <label>
+          <span>Group by</span>
+          <select id="groupSelect"></select>
+        </label>
+        <label>
+          <span>Number column</span>
+          <select id="numberSelect"></select>
+        </label>
+        <button id="addRowButton" type="button">Add row</button>
+        <button id="clearButton" type="button">Clear</button>
+      </section>
+
+      <section class="insights" aria-label="Σύνοψη πίνακα">
+        <article>
+          <span>Rows</span>
+          <strong id="rowCount">0</strong>
+        </article>
+        <article>
+          <span>Columns</span>
+          <strong id="columnCount">0</strong>
+        </article>
+        <article>
+          <span>Total</span>
+          <strong id="totalValue">0</strong>
+        </article>
+        <article>
+          <span>Average</span>
+          <strong id="averageValue">0</strong>
+        </article>
+      </section>
+
+      <section class="table-card" aria-label="Πίνακας δεδομένων">
+        <div class="table-toolbar">
+          <div>
+            <h2>Data grid</h2>
+            <p id="tableStatus">Demo data loaded</p>
+          </div>
+          <div class="view-options">
+            <button id="compactButton" type="button" aria-pressed="false">Compact</button>
+            <button id="dedupeButton" type="button">Remove duplicates</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="dataTable"></table>
+        </div>
+      </section>
+
+      <section class="split-panels">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Group summary</h2>
+            <span id="summaryLabel">by Status</span>
+          </div>
+          <div id="summaryList" class="summary-list"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Paste CSV</h2>
+            <span>comma or tab separated</span>
+          </div>
+          <textarea id="pasteArea" rows="8" placeholder="Name,Status,Amount&#10;Acme,Won,1200"></textarea>
+          <div class="paste-actions">
+            <button id="loadPasteButton" type="button">Load pasted table</button>
+            <button id="copyButton" type="button">Copy cleaned CSV</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
