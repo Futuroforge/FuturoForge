@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Στοιχεία πελάτη · Tzamos Jewels</title>
+  <style>:root{font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#242424;background:#f5f5f5;color-scheme:light}*{box-sizing:border-box}body{margin:0;padding:32px 16px}main{max-width:650px;margin:auto;background:white;border:1px solid #dedede;border-radius:16px;padding:32px}h1{font-size:1.9rem;line-height:1.2;margin:10px 0}header p{margin:12px 0}.brand{font-size:.9rem;letter-spacing:.16em;font-weight:700}.preview{padding:12px 16px;background:#fff4d9;border-radius:8px;font-size:.875rem}label{display:block;margin:18px 0;font-weight:600}input,textarea{width:100%;display:block;margin-top:6px;padding:12px;border:1px solid #999;border-radius:7px;font:inherit;min-height:48px}textarea{resize:vertical}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid label{min-width:0;margin:0}fieldset{margin:22px 0;padding:0;border:0}legend{font-weight:600}.choices label,.check{display:flex;align-items:flex-start;gap:10px;font-weight:400}.choices input,.check input{width:21px;height:21px;min-height:21px;flex:none;margin:2px 0;accent-color:#262626}.choices label{margin:12px 0}.hint,footer,label>span{font-size:.875rem;color:#555;font-weight:400}.check span{font-size:1rem;color:inherit}button{width:100%;padding:15px;border:0;border-radius:8px;background:#222;color:white;font:600 1rem system-ui}button:disabled{background:#626262;cursor:not-allowed}footer{text-align:center;margin-top:26px}a{color:inherit}:focus-visible{outline:3px solid #996f24;outline-offset:3px}[hidden]{display:none!important}@media(max-width:480px){body{padding:12px}main{padding:22px 16px}.grid{grid-template-columns:1fr;gap:0}.grid label{margin:12px 0}h1{font-size:1.65rem}}
+</style>
+</head>
+<body>
+<main>
+  <header><p class="brand">TZAMOS JEWELS</p><h1>Στοιχεία πελάτη</h1><p>Συμπληρώστε τα στοιχεία για την αποστολή ή την παραλαβή σας.</p></header>
+  <p class="preview">Με το κουμπί παρακάτω ανοίγει έτοιμο μήνυμα στην εφαρμογή email σας. Εκεί πατήστε «Αποστολή» για να το λάβει το κατάστημα.</p>
+  <form id="details">
+    <label>Ονοματεπώνυμο<input name="fullName" autocomplete="name" required maxlength="120"></label>
+    <div class="grid">
+      <label>Κινητό<input name="phone" type="tel" autocomplete="tel" required maxlength="30"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+    </div>
+    <fieldset><legend>Τρόπος παραλαβής</legend><div class="choices">
+      <label><input type="radio" name="delivery" value="shipping" checked> Αποστολή στη διεύθυνσή μου</label>
+      <label><input type="radio" name="delivery" value="pickup"> Παραλαβή από το κατάστημα</label>
+    </div></fieldset>
+    <div id="address">
+      <label>Οδός και αριθμός<input name="street" autocomplete="address-line1" required maxlength="180"></label>
+      <div class="grid"><label>Πόλη / περιοχή<input name="city" autocomplete="address-level2" required maxlength="100"></label><label>Ταχυδρομικός κώδικας<input name="postalCode" autocomplete="postal-code" required maxlength="16"></label></div>
+      <label>Χώρα<input name="country" autocomplete="country-name" value="Ελλάδα" required maxlength="80"></label>
+    </div>
+    <label>Κωδικός αιτήματος / προϊόν <span>(προαιρετικό)</span><input name="reference" maxlength="100"></label>
+    <label>Σημείωση <span>(προαιρετικό)</span><textarea name="note" rows="3" maxlength="500" placeholder="Π.χ. όροφος ή κουδούνι"></textarea></label>
+    <p class="hint">Μη συμπληρώνετε στοιχεία κάρτας ή κωδικούς πληρωμής. Αυτή η φόρμα δεν πραγματοποιεί ούτε επιβεβαιώνει πληρωμή.</p>
+    <details><summary>Πώς αποστέλλονται τα στοιχεία</summary><p>Η σελίδα ετοιμάζει ένα email για το κατάστημα. Δεν υποβάλλει στοιχεία σε βάση δεδομένων ούτε επιβεβαιώνει πληρωμή. Ελέγξτε το μήνυμα στην εφαρμογή email σας πριν το στείλετε. Παραλήπτες: info@tzamosjewels.gr, ktzamos@gmail.com και tzamosjewels@gmail.com. Για ερωτήσεις σχετικά με τα στοιχεία σας επικοινωνήστε με το info@tzamosjewels.gr.</p></details>
+    <label class="check"><input type="checkbox" name="terms" required> <span>Επιβεβαιώνω ότι τα στοιχεία είναι σωστά και επιθυμώ να τα στείλω στο κατάστημα για την αποστολή ή την παραλαβή μου.</span></label>
+    <button type="submit">Αποστολή με email</button>
+    <p id="result" role="status" aria-live="polite"></p>
+    <div id="fallback" hidden><p>Αν δεν άνοιξε η εφαρμογή email, αντιγράψτε το μήνυμα και στείλτε το στους παραλήπτες:</p><p>info@tzamosjewels.gr, ktzamos@gmail.com, tzamosjewels@gmail.com</p><label>Έτοιμο μήνυμα<textarea id="message" readonly rows="10"></textarea></label><button id="copy-message" type="button">Αντιγραφή μηνύματος</button></div>
+  </form>
+  <footer>Χρειάζεστε βοήθεια; <a href="tel:+302682023947">26820 23947</a></footer>
+</main>
+<script>"use strict";
+const form = document.getElementById("details");
+const address = document.getElementById("address");
+function updateDelivery() {
+  const shipping = form.elements.delivery.value === "shipping";
+  address.hidden = !shipping;
+  for (const input of address.querySelectorAll("input")) {
+    input.disabled = !shipping;
+    input.required = shipping;
+  }
+}
+form.addEventListener("change", updateDelivery);
+const recipients = "info@tzamosjewels.gr,ktzamos@gmail.com,tzamosjewels@gmail.com";
+const result = document.getElementById("result");
+const message = document.getElementById("message");
+form.addEventListener("submit", event => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+  const data = new FormData(form);
+  const value = name => String(data.get(name) || "").trim();
+  const lines = ["Στοιχεία πελάτη — Tzamos Jewels", "",
+    `Ονοματεπώνυμο: ${value("fullName")}`, `Κινητό: ${value("phone")}`, `Email: ${value("email")}`,
+    `Παραλαβή: ${value("delivery") === "shipping" ? "Αποστολή" : "Από το κατάστημα"}`];
+  if (value("delivery") === "shipping") lines.push(`Διεύθυνση: ${value("street")}`, `Πόλη / περιοχή: ${value("city")}`, `Τ.Κ.: ${value("postalCode")}`, `Χώρα: ${value("country")}`);
+  if (value("reference")) lines.push(`Κωδικός αιτήματος / προϊόν: ${value("reference")}`);
+  if (value("note")) lines.push(`Σημείωση: ${value("note")}`);
+  lines.push("", "Επιβεβαιώνω ότι τα στοιχεία είναι σωστά και επιθυμώ την αποστολή τους στο κατάστημα για την αποστολή ή παραλαβή μου.", "Η φόρμα δεν αποτελεί απόδειξη πληρωμής.");
+  message.value = lines.join("\r\n");
+  document.getElementById("fallback").hidden = false;
+  result.textContent = "Πατήστε «Αποστολή» στην εφαρμογή email σας. Η σελίδα δεν μπορεί να επιβεβαιώσει ότι το email στάλθηκε.";
+  window.location.href = `mailto:${recipients}?subject=${encodeURIComponent("Στοιχεία πελάτη — Tzamos Jewels")}&body=${encodeURIComponent(message.value)}`;
+});
+document.getElementById("copy-message").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(message.value);
+    result.textContent = "Το μήνυμα αντιγράφηκε. Επικολλήστε το στο email σας και πατήστε Αποστολή.";
+  } catch {
+    message.focus(); message.select();
+    result.textContent = "Το μήνυμα επιλέχθηκε. Χρησιμοποιήστε Αντιγραφή και επικολλήστε το στο email σας.";
+  }
+});
+updateDelivery();
+</script>
+</body>
+</html>
