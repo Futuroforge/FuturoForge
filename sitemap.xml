@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://futuroforge.com/</loc></url>
   <url><loc>https://futuroforge.com/en/</loc></url>
   <url><loc>https://futuroforge.com/de/</loc></url>
   <url><loc>https://futuroforge.com/fr/</loc></url>
   <url><loc>https://futuroforge.com/es/</loc></url>
   <url><loc>https://futuroforge.com/it/</loc></url>
+  <url>
+    <loc>https://futuroforge.com/apps/calories-on-your-plate/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://futuroforge.com/en/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://futuroforge.com/de/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://futuroforge.com/fr/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://futuroforge.com/es/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://futuroforge.com/it/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+  </url>
+  <url>
+    <loc>https://futuroforge.com/en/apps/calories-on-your-plate/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://futuroforge.com/en/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://futuroforge.com/de/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://futuroforge.com/fr/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://futuroforge.com/es/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://futuroforge.com/it/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+  </url>
+  <url>
+    <loc>https://futuroforge.com/de/apps/calories-on-your-plate/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://futuroforge.com/en/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://futuroforge.com/de/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://futuroforge.com/fr/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://futuroforge.com/es/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://futuroforge.com/it/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+  </url>
+  <url>
+    <loc>https://futuroforge.com/fr/apps/calories-on-your-plate/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://futuroforge.com/en/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://futuroforge.com/de/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://futuroforge.com/fr/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://futuroforge.com/es/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://futuroforge.com/it/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+  </url>
+  <url>
+    <loc>https://futuroforge.com/es/apps/calories-on-your-plate/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://futuroforge.com/en/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://futuroforge.com/de/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://futuroforge.com/fr/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://futuroforge.com/es/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://futuroforge.com/it/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+  </url>
+  <url>
+    <loc>https://futuroforge.com/it/apps/calories-on-your-plate/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://futuroforge.com/en/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://futuroforge.com/de/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://futuroforge.com/fr/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://futuroforge.com/es/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://futuroforge.com/it/apps/calories-on-your-plate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://futuroforge.com/apps/calories-on-your-plate/" />
+  </url>
 </urlset>
